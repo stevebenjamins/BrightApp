@@ -1,0 +1,46 @@
+=== Talk w/ Jake ====
+
+	- Can we make the namespace URL admin/users/1/ => admin/dashboard?
+- Followup, this problem seems to be caused by the sessions controller!
+
+- Any idea why the javascript (My Account drop-down) is behaving differently in application.js than admin.js?
+
+- Any thoughts on creating a "settings" model? Should I just put it under users?
+
+=== Models ===
+
+	Website
+		has_many users
+
+	User 
+		has many pages
+		belongs_to website
+
+	Page (automatically gets a page called Home that can't be deleted)
+		belongs to User
+		has many elements
+	
+	Element
+		belongs to User
+	
+	Template
+		belongs to User
+	
+	Session
+
+=== Routes ===
+
+Admin controller namespace
+
+URLS
+
+/admin/page/
+/admin/profile/
+/admin/settings/
+/admin/template/
+
+/domain/page
+
+=== Questions for Jake / errors ===
+
+1. Multiple resources in a form? For example. Website, user & homepage all in the signup form.

@@ -1,0 +1,31 @@
+/*
+ *= require admin/ribbons
+*/
+
+body { background: url('../pinstripe.png');}
+
+.admin-interface { font-family: 'myriad-pro';
+	
+	.box { background: #f7fbff; padding: 10px; border-radius: 6px; box-shadow: 0 0px 3px #999; }
+		.box .inner { background: #FFF; padding: 10px; }
+			
+	#notice { background: #bbddbb; border-radius: 6px; border: 1px solid #779977; color: #557755; font-size: 13px; padding: 10px; }
+	input { padding: 10px; border: 1px solid #CCC; border-radius: 6px; margin-top: 3px; font-size: 14px; font-family: arial; }
+	input[type="submit"] { background: -moz-linear-gradient(center top , #398eae 0%, #10536d 100%); background: -webkit-linear-gradient(top , #398eae, #10536d );
+	    border: 1px solid #194b5e; border-radius: 6px;
+	    color: #FFFFFF; cursor: pointer;
+	    font: 17px/14px 'Myriad-Pro',Arial,Tahoma,Verdana,sans-serif;
+	    text-align: center;
+	    text-shadow: 0px 0px 2px #000; }
+		
+	form ul { list-style: none; margin: 0; padding: 0; }
+	label { display: block; font-weight: bold; font-size: 13px; }
+	li { margin-bottom: 15px;}
+
+}
+
+#settings { width: 800px; text-align: left; margin: 20px auto 20px auto; 
+
+	
+	
+}

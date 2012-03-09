@@ -1,0 +1,9 @@
+body { text-align: left; background: url('../pinstripe.png'); font-family: 'myriad-pro'; }
+
+h3 { border-bottom: 1px dashed #CCC; padding-bottom:4px; }
+ul#form { list-style: none; padding: 0; margin: 0; 
+	li { clear: both; }
+}
+label { width: 100px; display: block; float:left; padding: 12px 0 0 0; }
+input[type=text] { float: right; width: 280px;  }
+input[type=submit] { margin: 10px 0 0 103px; }

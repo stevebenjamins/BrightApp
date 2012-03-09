@@ -1,0 +1,30 @@
+
+<% # MASSIVE NOTICE. ANY CHANGES IN THIS FILE MUST ALSO BE MADE IN THE PUBLIC _PAGE PARTIAL AS WELL %>
+
+<DIV id="page">
+	<DIV id="wrapper">
+
+		<h1 id="logo"><%= link_to @page.website.name, public_home_url(@page.website.domain) %></h1>
+		
+		<UL id="nav">
+			<% @page.website.pages.each do |p| %>
+				<% if p.name != 'Home' %>
+					<LI><%= link_to p.name, public_page_url(p.website.domain, p.permalink) %></LI>
+				<% end %>
+			<% end %>
+		</UL>
+		
+		<DIV id="content">
+			<h3><%= @page.name %></h3>
+			<P>Defined Concrete Services specializes in concrete design and construction in the surrounding lower mainland. We work with the vision you have for your property and can help to create one for you. You'll probably find we can do so much more than just concrete.</P>
+			<BR><BR><BR><BR><BR>
+			<BR><BR><BR><BR><BR>
+			<BR><BR><BR><BR><BR>
+			<BR><BR><BR><BR><BR>
+			<BR><BR><BR><BR><BR>
+			<BR><BR><BR><BR><BR>
+			<BR><BR><BR><BR><BR>
+		</DIV>
+		<P><BR>Footer<BR></p>
+	</DIV>
+</DIV>

@@ -1,0 +1,12 @@
+<DIV id="bottomribbon">
+	<DIV id="wrapper">
+	
+	<UL>
+		<LI><%= link_to "New Page", new_admin_page_url, :class => 'fancybox fancybox.iframe' %></LI>
+		<LI><%= link_to "Edit Page", edit_admin_page_url(@page.id), :class => 'fancybox fancybox.iframe' %></LI>
+	    <LI><%= link_to "Delete Page", admin_page_url(@page.id), confirm: 'Are you sure?', method: :delete %></LI>
+	</UL>
+	
+	
+	</DIV>
+</DIV>

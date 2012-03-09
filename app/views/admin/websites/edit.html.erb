@@ -1,0 +1,47 @@
+<%= render 'admin/shared/topribbon' %>
+
+	<DIV class="admin-interface" id="settings">
+
+		<DIV class="box">
+				
+			<DIV class="inner">
+				
+				<h1>Settings</h1>
+				
+				<% if notice %>
+					<P id="notice" style="width:300px;margin:10px auto 20px auto;"> <%= notice %> </p>
+				<% end %>
+
+					<%= form_for([:admin, @website]) do |f| %>
+
+						<% if @website.errors.any? %>
+					    <div class="admin-interface" id="error_explanation">
+					      <div id="notice"><strong><%= pluralize(@website.errors.count, "error") %> prohibited this entry from being saved:</strong><BR><BR>
+
+						      <ul>
+						      <% @website.errors.full_messages.each do |msg| %>
+						        <li><%= msg %></li>
+						      <% end %>
+						      </ul>
+						  </div>
+					    </div>
+					  <% end %>
+
+						<UL>
+							<LI>
+								<%= f.label :name %>
+								<%= f.text_field :name %>
+							</LI>
+							<LI>
+								<%= f.label :domain %>
+								<%= f.text_field :domain %>
+							</LI>
+							<LI>
+								<%= f.submit "Save Settings »" %>
+							</LI>
+						</UL>
+
+					<% end %>
+				</DIV>
+			</DIV>
+		</DIV>

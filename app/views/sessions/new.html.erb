@@ -1,0 +1,42 @@
+<DIV id="ribbon">&nbsp;</DIV>
+
+<DIV class="admin-interface">
+	
+	<%= image_tag "public/logo-full.png", :id => "public-logo" %>
+
+	<% if notice %>
+		<P id="notice" style="width:300px;margin:10px auto 20px auto;"> <%= notice %> </p>
+	<% end %>
+
+	<DIV id="public-login" class="box">
+
+		<DIV class="inner">
+
+			<h3>Welcome back!</h3>
+			
+			<%= form_tag '/sessions' do %>
+  
+			<ul>
+				<LI><%= label_tag :email %> 
+			     <%= text_field_tag :email %></LI>
+      
+			  	 <LI><%= label_tag :password %> 
+			     <%= password_field_tag :password %></LI>
+  
+			  	 <LI><%= submit_tag "Sign into your account »" %></LI>
+			</UL>
+  
+			<% end %>
+
+	
+		</DIV>
+
+	</DIV>
+
+	<DIV id="public-breadcrumbs">
+
+		<P><%= link_to "Register »", register_url %></P>
+
+	</DIV>
+
+</DIV>

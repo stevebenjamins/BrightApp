@@ -1,0 +1,18 @@
+body { background: url('../wood.png'); font-family: "myriad-pro"; }
+
+#page {
+	
+	h1#logo a { font-size: 36px; font-weight: normal; text-shadow: 1px 1px #FFF; margin-top: 0px; color: #333; letter-spacing: -2px; }
+	
+	a { color: #006699; text-decoration: none; }
+	ul#nav a { margin-left:10px; text-shadow: 1px 1px #FFF; font-size: 15px; color: #333; font-weight: bold;  }
+	ul#nav a:hover { background: #FFFFCC; border-radius: 4px; color: #006699; }
+	
+	#content { background: #FFF; border: 8px solid #FFFFCC; border-radius: 8px; box-shadow: 0px 0px 6px #777; padding: 30px; 
+	
+		h3 { margin: 0 0 20px 0; font-weight: normal; font-size: 24px; }
+		p { margin: 20px 0; }
+		
+	}
+	
+}

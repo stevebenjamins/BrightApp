@@ -1,0 +1,33 @@
+<DIV id="ribbonspacer">
+	
+	<DIV id="ribbon">
+	
+		<DIV id="wrapper">
+
+ 			<a href="http://brightcontractor.com/" target="_new" class="logo"><%= image_tag ('admin/ribbon/logo-icon.png'), :alt => "Go to BrightContractor.com" %></a>
+	
+			<UL id="nav">
+				<LI><%= link_to "Edit Website", admin_dashboard_url %></LI>
+				<LI><a href="#">Change Theme</a></LI>
+				<LI><%= link_to "Settings", admin_dashboard_settings_url %></LI>
+			</UL>
+
+
+			<UL id="account">
+				<LI><a id="account" href="#">My Account</a></LI>
+				
+				<UL>
+					<LI><strong><A href="#">Support </A></strong></LI>
+					<LI><%= link_to "View website", public_home_path(@user.website.domain) %></LI>
+					<LI><%= link_to "Account Details", admin_account_details_url %></LI>
+					<LI><A href="#">Domain name <span>Pro</span></A></LI>
+					<LI><%= link_to "Logout", session_url(session[:user_id]), method: :delete %></LI>
+				</UL>
+				
+			</UL>
+
+		</DIV>
+	
+	</DIV>
+
+</DIV>

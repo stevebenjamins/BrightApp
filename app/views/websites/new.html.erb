@@ -1,0 +1,78 @@
+<DIV id="ribbon">&nbsp;</DIV>
+
+
+	<DIV class="admin-interface">
+
+		<%= image_tag "public/logo-full.png", :id => "public-logo" %>
+
+		<% if notice %>
+			<P id="notice" style="width:300px;margin:10px auto 20px auto;"> <%= notice %> </p>
+		<% end %>
+
+		<DIV id="public-login" class="box">
+
+			<DIV class="inner">
+
+			<%= form_for @website do |f| %>
+
+				<% if @website.errors.any? %>
+			    <div class="admin-interface" id="error_explanation">
+			      <div id="notice"><strong><%= pluralize(@website.errors.count, "error") %> prohibited this entry from being saved:</strong><BR><BR>
+
+				      <ul>
+				      <% @website.errors.full_messages.each do |msg| %>
+				        <li><%= msg %></li>
+				      <% end %>
+				      </ul>
+				  </div>
+			    </div>
+			  <% end %>
+
+				<UL>
+					<LI>
+						<h3>Website Registration</h3>
+					</LI>
+					<LI>
+						<%= f.label :name, "Website Name" %>
+						<%= f.text_field :name %>
+					</LI>
+					<LI>
+						<%= f.label :domain %>
+						<%= f.text_field :domain %>
+					</LI>
+					<%= f.fields_for :users do |builder| %>
+						<LI>
+							<h3>User Registration</h3>
+						</LI>
+						<LI>
+							<%= builder.label :name %>
+							<%= builder.text_field :name %>
+						</LI>
+						<LI>
+							<%= builder.label :email %>
+							<%= builder.text_field :email %>
+						</LI>
+						<LI>
+							<%= builder.label :password %>
+							<%= builder.password_field :password %>
+						</LI>
+						<LI>
+							<%= builder.label :password_confirmation %>
+							<%= builder.password_field :password_confirmation %>
+						</LI>
+					<% end %>					
+					<LI>
+						<%= f.submit "Complete Sign Up »" %>
+					</LI>
+				</UL>
+
+			<% end %>
+				</DIV>
+
+	</DIV>
+	
+	<DIV id="public-breadcrumbs">
+
+		<P><%= link_to "Already registered? Sign in »", new_session_url %></P>
+
+	</DIV>

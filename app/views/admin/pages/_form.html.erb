@@ -1,0 +1,13 @@
+<%= form_for([:admin, @page]) do |f| %>
+	
+	<UL id="form">
+		<LI>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</LI>
+		<LI>
+			<%= f.submit %>
+		</LI>
+	</UL>
+	
+<% end %>
