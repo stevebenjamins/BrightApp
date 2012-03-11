@@ -4,7 +4,8 @@ class Admin::WebsitesController < ApplicationController
   layout "admin"
 
   def edit
-    @website = Website.find_by_user_id(session[:user_id])
+    user = User.find(session[:user_id])
+    @website = Website.find(user.website_id)
   end
   
   def update

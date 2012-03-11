@@ -28,5 +28,11 @@ $(document).ready(function(){
 		}
 		$("ul#account ul").toggle()
 	});
+	
+	/// Drawer Toggle
+	
+	$("#drawer_toggle").click(function(){ 
+		$("#drawer").slideToggle();
+	});
 
 });

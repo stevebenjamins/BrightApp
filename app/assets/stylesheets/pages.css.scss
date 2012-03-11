@@ -1,3 +1,18 @@
+/* Responsive, mobile */
+
+@media all and (max-width: 699px) {
+
+	#page { margin-top: 10px !important; }
+  	h1#logo { float: none !important; text-align: center; }
+	ul#nav { float: none !important; }
+		ul#nav li { float: none !important; text-align: center; }
+	#wrapper { width: 100% !important; }
+	#content { padding: 15px !important; }
+
+}
+
+/* Architecture for pages. Styling should be done by templates */ 
+
 #page { margin-top: 50px; 
 
 	* { margin: 0; padding: 0; }
@@ -11,4 +26,5 @@
 		ul#nav a { display: block; padding: 10px;}
 	
 	#content { clear: both; }
+	
 }

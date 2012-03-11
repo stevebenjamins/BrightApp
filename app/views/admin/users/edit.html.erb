@@ -12,7 +12,7 @@
 					<P id="notice" style="width:300px;margin:10px auto 20px auto;"> <%= notice %> </p>
 				<% end %>
 
-					<%= form_for @user do |f| %>
+					<%= form_for ([:admin, @user]) do |f| %>
 
 						<% if @user.errors.any? %>
 					    <div class="admin-interface" id="error_explanation">

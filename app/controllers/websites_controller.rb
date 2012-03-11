@@ -14,7 +14,8 @@ class WebsitesController < ApplicationController
       page.name = "Home"
       page.permalink = "home"
       page.website_id = @website.id
-      page.save      
+      page.save
+      redirect_to root_url, :notice 'Thanks for registering-- just login below and you're ready to go!      
     else
         render action: "new"     
     end

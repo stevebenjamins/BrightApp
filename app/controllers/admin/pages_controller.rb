@@ -16,7 +16,8 @@ class Admin::PagesController < ApplicationController
   def create
     @page = Page.new
     @page.name = params[:page][:name]
-    website = Website.find_by_user_id(session[:user_id])
+    user = User.find(session[:user_id])
+    website = Website.find(user.website_id)
     @page.website_id = website.id
     permalink = params[:page][:name]
     @page.permalink = permalink.gsub(/\s/, "-").gsub(/([^\W-])/, '\1').downcase
