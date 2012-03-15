@@ -1,0 +1,15 @@
+<h3>New Paragraph</h3>
+
+<%= form_for @paragraph, :url => admin_page_element_paragraphs_url(params[:page_id])  do |f| %>
+
+<UL>
+	<LI>
+		<%= f.label :content %>
+		<%= f.text_area :content %>
+	</LI>
+	<LI>
+		<%= f.submit %>
+	</LI>
+</UL>
+
+<% end %>

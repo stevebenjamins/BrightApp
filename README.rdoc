@@ -1,46 +1,22 @@
-=== Talk w/ Jake ====
+=== For Jake ===
 
-	- Can we make the namespace URL admin/users/1/ => admin/dashboard?
-- Followup, this problem seems to be caused by the sessions controller!
+- I currently have two _page.html.erb's one for the admin and one for the public facing. Any solutions?
 
-- Any idea why the javascript (My Account drop-down) is behaving differently in application.js than admin.js?
+=== Ruby modules ===
+- Move create into model!
 
-- Any thoughts on creating a "settings" model? Should I just put it under users?
+module Foo
+	def hello
+	  puts 'hello'
+	end
+end
 
-=== Models ===
+class Bar
+  include Foo
+end
 
-	Website
-		has_many users
+class Baz
+  include Foo
+end
 
-	User 
-		has many pages
-		belongs_to website
-
-	Page (automatically gets a page called Home that can't be deleted)
-		belongs to User
-		has many elements
-	
-	Element
-		belongs to User
-	
-	Template
-		belongs to User
-	
-	Session
-
-=== Routes ===
-
-Admin controller namespace
-
-URLS
-
-/admin/page/
-/admin/profile/
-/admin/settings/
-/admin/template/
-
-/domain/page
-
-=== Questions for Jake / errors ===
-
-1. Multiple resources in a form? For example. Website, user & homepage all in the signup form.
+Bar.new.hello => 'hello'

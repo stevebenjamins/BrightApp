@@ -35,4 +35,12 @@ $(document).ready(function(){
 		$("#drawer").slideToggle();
 	});
 
+	/// Show Edit on Elements
+	$(".element").hover(function(){
+		$("p.meta", this).fadeIn('fast');
+	}, function(){
+		$("p.meta", this).fadeOut('fast');
+	});	
+
+
 });

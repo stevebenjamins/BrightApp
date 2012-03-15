@@ -11,10 +11,13 @@ BrightApp::Application.routes.draw do
     get "dashboard/account-details" => "users#edit", :as => :account_details
     get "dashboard/settings" => "websites#edit"
     get "dashboard/:permalink" => "pages#show"
-    resources :users,:pages,:websites
+    resources :users,:websites
+
+    resources :pages do 
       namespace :element do 
-        resources :elements
+        resources :paragraphs
       end
+    end
   end
 
   
