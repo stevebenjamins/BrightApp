@@ -18,7 +18,7 @@
 			<h3><%= @page.name %></h3>
 			<% @page.page_elements.each do |e| %>
 			
-				<%= e.element.content %>
+				<DIV class="element" id="paragraph_<%= (e.id) %>"><P><%= simple_format(e.element.content) %></P></DIV>
 			
 			<% end %>
 

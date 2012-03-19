@@ -17,16 +17,12 @@
 		<DIV id="content">
 			<h3><%= @page.name %></h3>
 			<% @page.page_elements.each do |e| %>
-				
-				<DIV class="element">
-					<P><%= e.element.content %></P>
-			   		<P class="meta"><%= link_to "Edit", admin_page_element_paragraph_url(@page, e.element.id), :class => 'fancybox fancybox.iframe' %> | <%= link_to "Delete", admin_page_element_paragraph_url(@page, e.element.id), method: 'delete', confirm: 'Are you sure you want to delete this?' %></P>
-	        	</DIV>
+
+				<%= display_element(e.element) %>
 	
 			<% end %>
 
 		</DIV>
-
 		<P><BR>Footer<BR></p>
 	</DIV>
 </DIV>

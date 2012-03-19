@@ -5,7 +5,7 @@
 		<DIV id="wrapper">
 
 			<UL>
-				<LI><%= link_to "Add Paragraph", new_admin_page_element_paragraph_url(@page) %></LI>
+				<LI><%= link_to "Add Paragraph Text", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax' %></LI>
 			</UL>
 
 		</DIV>
@@ -18,8 +18,8 @@
 	</UL>
 	
 	<UL>
-		<LI><%= link_to "New Page", new_admin_page_url, :class => 'fancybox fancybox.iframe' %></LI>
-		<LI><%= link_to "Edit Page", edit_admin_page_url(@page.id), :class => 'fancybox fancybox.iframe' %></LI>
+		<LI><%= link_to "New Page", new_admin_page_url, :class => 'fancybox fancybox.ajax' %></LI>
+		<LI><%= link_to "Edit Page", edit_admin_page_url(@page.id), :class => 'fancybox fancybox.ajax' %></LI>
 	    <LI><%= link_to "Delete Page", admin_page_url(@page.id), confirm: 'Are you sure?', method: :delete %></LI>
 	</UL>
 	

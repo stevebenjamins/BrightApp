@@ -1,0 +1,25 @@
+<%= form_for([:admin, @page, :element, @paragraph], :remote => true) do |f| %>
+
+<% if @paragraph.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@paragraph.errors.count, "error") %> prohibited this paragraph from being saved:</h2>
+
+    <ul>
+    <% @paragraph.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<UL>
+	<LI>
+		<%= f.label :content, "Paragraph:" %>
+		<%= f.text_area :content, :id => "paragraph" %>
+		<P class="helper">Want to add links, bold or italicize text? <a href="#">Click here</a>.</p>
+	</LI>
+</UL>
+
+<DIV id="submit"><%= f.submit %><a id="closebutton" href="javascript:;">Or cancel</a></DIV>
+
+<% end %>

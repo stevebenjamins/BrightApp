@@ -31,7 +31,7 @@
 		
 }
 
-#bottomribbon { background: url('ribbon/black_paper.png'); position: fixed; bottom: 0px; width: 100%; display: none; color: #666; font-size: 14px; padding: 15px 0 15px 0; box-shadow: 0px -3px 10px #CCC;
+#bottomribbon { background: url('ribbon/black_paper.png'); position: fixed; bottom: 0px; width: 100%; display: none; color: #666; font-size: 14px; padding: 15px 0 15px 0; box-shadow: 0px -3px 10px #CCC; z-index: 2;
 
 	#drawer { background: #222; bottom: 50px;  width: 100%; height: 100px; display: none; color: #666; font-size: 14px; box-shadow: inset 0 3px 5px #000000; 
 		a { display: block; background: #555; padding: 10px; border-radius: 8px; margin: 10px 0 0 0; border: 1px solid #000; }

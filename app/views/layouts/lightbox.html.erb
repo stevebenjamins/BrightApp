@@ -2,18 +2,12 @@
 <html>
 <head>
   <title>Lightbox BrightApp</title>
-  <%= stylesheet_link_tag    "admin/admin", :media => "all" %>
-  <%= stylesheet_link_tag    "admin/lightbox", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <script type="text/javascript" src="http://use.typekit.com/mtj3xku.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+  <%= javascript_include_tag "admin" %>
 </head>
 <body>
 
-<DIv class="admin-interface">
-<%= yield %>
+<DIv class="admin-interface lightbox">
+	<%= yield %>
 </DIV>
 
 </body>

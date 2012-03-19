@@ -1,9 +1,23 @@
-body { text-align: left; background: url('../pinstripe.png'); font-family: 'myriad-pro'; }
+.lightbox { text-align: left; background: url('../pinstripe.png'); font-family: 'myriad-pro'; margin: 0; height: 100%; position: relative;
 
-h3 { border-bottom: 1px dashed #CCC; padding-bottom:4px; }
-ul#form { list-style: none; padding: 0; margin: 0; 
-	li { clear: both; }
+	a { color: #006699; }
+
+	h3 { border-bottom: 1px dashed #CCC; padding-bottom:4px; padding-left: 20px; text-transform: uppercase; margin-top: 0px; padding-top: 20px; }
+	form ul { list-style: none; padding: 0; margin: 20px; 
+		li { clear: both; }
+	}
+
+	label { width: 100px; display: block; float:left; padding: 12px 0 0 0; font-size: 18px; }
+		p.helper { width: 100px; display: block; float:left; font-size: 12px; color: #555; clear: left; display: inline; }
+	textarea { width: 410px; font-size: 14px; padding:3px; float: right; height: 200px; margin-top: 12px; }
+		textarea#paragraph { height: 260px; }
+	input[type=text] { float: right; width: 240px;  }
+	input[type=submit] { margin: 0; }
+
+	#submit { background: #DDD; padding-top: 10px; width: 100%; bottom: 0px; height: 50px; position:absolute; }
+		#submit input {float: left; margin-left: 20px; }
+		#submit a { text-decoration: none; float: left; display: inline; cursor: pointer; color: #333; margin-top: 11px; font-size: 14px; margin-left: 20px;}
+
+	div.advanced li { display: none; }
+	div.advanced legend { display: inline;}
 }
-label { width: 100px; display: block; float:left; padding: 12px 0 0 0; }
-input[type=text] { float: right; width: 280px;  }
-input[type=submit] { margin: 10px 0 0 103px; }

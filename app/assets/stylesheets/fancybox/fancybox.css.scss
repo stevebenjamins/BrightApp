@@ -15,7 +15,7 @@
 .fancybox-outer {
 	padding: 0;
 	margin: 0;
-	background: #f9f9f9;
+	background: #DDD;
 	color: #444;
 	text-shadow: none;
 	-webkit-border-radius: 4px;
@@ -73,7 +73,7 @@
 	margin-left: -21px;
 	width: 42px;
 	height: 42px;
-	background: url('fancybox_loading.gif');
+/*	background: url('fancybox_loading.gif');*/
 	opacity: 0.8;
 	cursor: pointer;
 	z-index: 1010;

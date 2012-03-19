@@ -42,12 +42,15 @@ class Admin::PagesController < ApplicationController
   def show
     user = User.find(session[:user_id])
     @page = Page.where("website_id = ? AND permalink = ?", user.website_id, params[:permalink]).first
+    
+    
+    
   end
   
   def destroy 
     @page = Page.find(params[:id])
     @page.destroy
-    redirect_to admin_dashboard_url
+
   end
       
 end

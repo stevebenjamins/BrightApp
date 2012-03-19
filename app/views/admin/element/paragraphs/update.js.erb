@@ -1,0 +1,2 @@
+$.fancybox.close();
+$("#paragraph_<%= @paragraph.page_element.id %>").replaceWith("<%= escape_javascript(render('paragraph', :paragraph => @paragraph))  %>");
