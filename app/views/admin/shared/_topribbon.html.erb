@@ -4,10 +4,9 @@
 	
 		<DIV id="wrapper">
 
- 			<a href="http://brightcontractor.com/" target="_new" class="logo"><%= image_tag ('admin/ribbon/logo-icon.png'), :alt => "Go to BrightContractor.com" %></a>
 	
 			<UL id="nav">
-				<LI><%= link_to "Edit Website", admin_dashboard_url %></LI>
+				<LI><%= link_to "Edit Website", admin_dashboard_url, :class => "active" %></LI>
 				<LI><a href="#">Change Theme</a></LI>
 				<LI><%= link_to "Settings", admin_dashboard_settings_url %></LI>
 			</UL>

@@ -1,0 +1,30 @@
+body { background: url('../ice.png'); font-family: "myriad-pro"; }
+
+#page {
+	
+	h1#logo a { font-size: 32px; font-family: "myriad-pro-condensed"; text-shadow: 1px 1px #FFF; margin-top: 0px; color: #003366; }
+	
+	a { color: #003366; text-decoration: none; }
+	ul#nav a { text-shadow: 1px 1px #FFF; font-size: 18px; color: #003366; }
+	ul#nav a:hover { color: #006699; }
+	
+	#content { background: #FFF; border: 8px solid #f7fbff; border-radius: 8px; box-shadow: 0px 0px 4px #AAA; padding: 30px; 
+	
+		h3 { margin: 0 0 20px 0; font-family: "myriad-pro-condensed"; font-size: 26px; color: #003366; }
+		p { margin: 20px 0; font-size: 17px; color: #444; font-family: 'Arial'; }
+		
+	}
+	
+}
+
+/* Responsive, mobile */
+
+@media all and (max-width: 699px) {
+
+	ul#nav { margin: 0 !important; }
+	ul#nav li {  }
+	ul#nav a { border-top: 1px solid #0099CC !important; color: #f7fbff !important; background: #003366 !important;text-shadow: none !important; }
+	ul#nav a:hover { opacity: 1;}
+	#content { border-radius: 0px !important; box-shadow: none !important; border: none !important;  }
+	
+}

@@ -5,7 +5,13 @@
 		<DIV id="wrapper">
 
 			<UL>
-				<LI><%= link_to "Add Paragraph Text", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax' %></LI>
+				<LI><%= link_to "Paragraph", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax button elementbutton' %></LI>
+				<LI><%= link_to "Paragraph", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax button elementbutton' %></LI>
+				<LI><%= link_to "Paragraph", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax button elementbutton' %></LI>
+				<LI><%= link_to "Paragraph", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax button elementbutton' %></LI>
+				<LI><%= link_to "Paragraph", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax button elementbutton' %></LI>
+				<LI><%= link_to "Paragraph", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax button elementbutton' %></LI>
+				<LI><%= link_to "Paragraph", new_admin_page_element_paragraph_url(@page), :class => 'fancybox fancybox.ajax button elementbutton' %></LI>
 			</UL>
 
 		</DIV>
@@ -14,13 +20,13 @@
 	<DIV id="wrapper">
 
 	<UL>
-		<LI><A href="#" id="drawer_toggle">Add Element</a></LI>
+		<LI><A href="javascript:;" id="drawer_toggle" class="button primebutton">Add to Page</a></LI>
 	</UL>
 	
 	<UL>
-		<LI><%= link_to "New Page", new_admin_page_url, :class => 'fancybox fancybox.ajax' %></LI>
-		<LI><%= link_to "Edit Page", edit_admin_page_url(@page.id), :class => 'fancybox fancybox.ajax' %></LI>
-	    <LI><%= link_to "Delete Page", admin_page_url(@page.id), confirm: 'Are you sure?', method: :delete %></LI>
+		<LI><%= link_to "New Page", new_admin_page_url, :class => 'fancybox fancybox.ajax button secondarybutton' %></LI>
+		<LI><%= link_to "Edit Page", edit_admin_page_url(@page.id), :class => 'fancybox fancybox.ajax button secondarybutton' %></LI>
+	    <LI><%= link_to "Delete Page", admin_page_url(@page.id), confirm: 'Are you sure?', method: :delete, :class => 'button secondarybutton' %></LI>
 	</UL>
 	
 	</DIV>

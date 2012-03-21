@@ -11,18 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120311223551) do
+ActiveRecord::Schema.define(:version => 20120320012832) do
 
-  create_table "add_website_i_dto_pages", :force => true do |t|
-    t.integer  "website_id", :default => 1
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-  end
-
-  create_table "add_website_id_to_pages", :force => true do |t|
-    t.integer  "website_id", :default => 1
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+  create_table "elements", :force => true do |t|
+    t.string   "type"
+    t.integer  "page_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "type_id"
   end
 
   create_table "page_elements", :force => true do |t|
@@ -36,9 +32,9 @@ ActiveRecord::Schema.define(:version => 20120311223551) do
   create_table "pages", :force => true do |t|
     t.string   "name"
     t.string   "permalink"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.integer  "website_id", :default => 1
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "website_id"
   end
 
   create_table "paragraphs", :force => true do |t|

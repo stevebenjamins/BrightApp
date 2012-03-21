@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def template_stylesheet
-    stylesheet_link_tag    "templates/carpenter", :media => "all" 
+    stylesheet_link_tag    "templates/ice", :media => "all" 
   end
   
   def display_element(e)

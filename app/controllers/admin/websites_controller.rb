@@ -11,7 +11,7 @@ class Admin::WebsitesController < ApplicationController
   def update
     @website = Website.find(params[:id])
 
-    if @website.update_attributes(params[:page])
+    if @website.update_attributes(params[:website])
       redirect_to admin_dashboard_url, notice: 'Entry was successfully updated.' 
     else
       render action: "edit" 
