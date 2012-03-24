@@ -16,11 +16,14 @@
 		
 		<DIV id="content">
 			<h3><%= @page.name %></h3>
+			<DIV id="contentelements">
 			<% @page.page_elements.each do |e| %>
 
 				<%= display_element(e.element) %>
 	
 			<% end %>
+			</DIV>
+			<%= sortable_element("contentelements", :url => 'TODO') %>
 
 		</DIV>
 		<P><BR>Footer<BR></p>

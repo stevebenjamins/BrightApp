@@ -1,2 +1,12 @@
-$.fancybox.close();
-$("#content").append("<%= escape_javascript(render('paragraph', :paragraph => @paragraph))  %>");
+<% if @paragraph.errors.any? %>
+	<% @paragraph.errors.full_messages.each do |error| %>
+		$('#errors').html('<p id="notice"><%= escape_javascript( error ) %></p>');
+	<% end %>
+<% else %>
+	$.fancybox.close();
+	$("#drawer").slideToggle();
+	$("#content").append("<%= escape_javascript(render('paragraph', :paragraph => @paragraph))  %>");
+<% end %>
+
+
+

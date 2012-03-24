@@ -1,4 +1,4 @@
-.lightbox { text-align: left; background: url('../pinstripe.png'); font-family: 'myriad-pro'; margin: 0; height: 100%; position: relative;
+.lightbox { text-align: left; background: url('../pinstripe.png'); font-family: 'myriad-pro'; margin: 0; height: 100%; 
 
 	a { color: #006699; }
 
@@ -13,6 +13,9 @@
 		textarea#paragraph { height: 260px; }
 	input[type=text] { float: right; width: 240px;  }
 	input[type=submit] { margin: 0; }
+	
+	#errors { margin: 0 20px; }
+	#spacer { height: 50px; clear: both; display: block; }
 
 	#submit { background: #DDD; padding-top: 10px; width: 100%; bottom: 0px; height: 50px; position:absolute; }
 		#submit input {float: left; margin-left: 20px; }

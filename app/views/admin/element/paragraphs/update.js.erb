@@ -1,2 +1,8 @@
-$.fancybox.close();
-$("#paragraph_<%= @paragraph.page_element.id %>").replaceWith("<%= escape_javascript(render('paragraph', :paragraph => @paragraph))  %>");
+<% if @paragraph.errors.any? %>
+	<% @paragraph.errors.full_messages.each do |error| %>
+		$('#errors').html('<p id="notice"><%= escape_javascript( error ) %></p>');
+	<% end %>
+<% else %>
+	$.fancybox.close();
+	$("#paragraph_<%= @paragraph.page_element.id %>").replaceWith("<%= escape_javascript(render('paragraph', :paragraph => @paragraph))  %>");
+<% end %>

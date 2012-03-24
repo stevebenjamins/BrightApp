@@ -17,12 +17,12 @@ class Admin::Element::ParagraphsController < ApplicationController
     @page = Page.find(params[:page_id])
     @paragraph = Paragraph.find(params[:id])
 
-    if @paragraph.update_attributes(params[:paragraph])
-      respond_to do |format|
+    respond_to do |format|
+      if @paragraph.update_attributes(params[:paragraph])
+        format.js 
+      else
         format.js 
       end
-    else
-      render action: "edit" 
     end
   end
         
@@ -31,17 +31,16 @@ class Admin::Element::ParagraphsController < ApplicationController
     @page = Page.find(params[:page_id])
     @paragraph = Paragraph.new(params[:paragraph])
     
-    if @paragraph.save 
-      if @page.page_elements.create(:element => @paragraph)
-        respond_to do |format|
+    respond_to do |format|
+      if @paragraph.save 
+        @test = "test"
+        if @page.page_elements.create(:element => @paragraph)
           format.js 
         end
+      else
+          format.js
       end
-    else
-        respond_to do |format|
-          format.html { render :action => :new }          
-        end
-    end
+  end
     
   end    
   

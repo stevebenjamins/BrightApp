@@ -1,25 +1,6 @@
 === For Jake ===
 
-- I currently have two _page.html.erb's one for the admin and one for the public facing. Any solutions?
+- Write some basic RSPec tests?
+- Refactor TWO _page.html.erb
 - The crazy routes for element creation (ie: I can't have form as a partial)
-- Route management. My routes are getting long and I have too many of them. Any thoughts?
-
-
-=== Ruby modules ===
-- Move create into model!
-
-module Foo
-	def hello
-	  puts 'hello'
-	end
-end
-
-class Bar
-  include Foo
-end
-
-class Baz
-  include Foo
-end
-
-Bar.new.hello => 'hello'
+- My routes are getting long and many. 

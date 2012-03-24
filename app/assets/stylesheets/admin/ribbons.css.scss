@@ -9,7 +9,7 @@
 	a.logo:hover img { border: none; opacity: 1; }
 	
 	a { display: block; color: #666; font-size: 14px; -moz-transition: color 0.2s; -webkit-transition: color 0.2s; text-decoration: none; }
-	a.active { color: #BBB; background: #333; box-shadow: inset 0 0 10px #000000; border-left: 1px solid #000; border-right: 1px solid #000; }
+	a.current { color: #BBB; background: #333; box-shadow: inset 0 0 10px #000000; border-left: 1px solid #000; border-right: 1px solid #000; }
 	a:hover { color: #BBB; }
 		
 	h1,h2,h3,h4,h5,h6 {  font-weight: normal; color: #666; }
