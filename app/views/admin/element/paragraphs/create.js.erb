@@ -5,7 +5,7 @@
 <% else %>
 	$.fancybox.close();
 	$("#drawer").slideToggle();
-	$("#content").append("<%= escape_javascript(render('paragraph', :paragraph => @paragraph))  %>");
+	$("#elements").append("<LI><%= escape_javascript(render('paragraph', :paragraph => @paragraph))  %></LI>");
 <% end %>
 
 

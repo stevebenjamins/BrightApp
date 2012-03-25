@@ -18,6 +18,11 @@ BrightApp::Application.routes.draw do
         resources :paragraphs
       end
     end
+
+    resources :page_elements do
+      collection { post :sort  }
+    end 
+
   end
 
   

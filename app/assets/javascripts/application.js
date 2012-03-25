@@ -1,10 +1,20 @@
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require hoverintent
 //= require fancybox
 //= require_tree .
 
 $(document).ready(function(){
+
+	$("#elements").sortable({ 
+		axis: 'y', 
+		handle: '#move',
+		update: function(){
+			$.post($(this).data('update-url'), $(this).sortable('serialize'));
+		}
+	});
+	
 
 	//// Load FancyBox
 	$(".fancybox").fancybox({
@@ -51,16 +61,16 @@ $(document).ready(function(){
 	});
 
 	/// Show Element Toolbar (with a delay)
-	$(".element").live({
+	$("ul#elements li").live({
 	       mouseenter:
 	           function()
 	           {
-				  $("p.meta", this).doTimeout( 'hover', 0, 'fadeIn', 'fast' );
+				  $("span.meta", this).doTimeout( 'hover', 0, 'fadeIn', 'fast' );
 	           },
 	        mouseleave:
 	           function()
 	           {
-				  $("p.meta", this).doTimeout( 'hover', 250, 'fadeOut', 'fast' );
+				  $("span.meta", this).doTimeout( 'hover', 250, 'fadeOut', 'fast' );
 	           }
 	       }
 	    );

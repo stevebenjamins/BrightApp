@@ -15,15 +15,14 @@
 		</UL>
 		
 		<DIV id="content">
-			<h3><%= @page.name %></h3>
-			<DIV id="contentelements">
-			<% @page.page_elements.each do |e| %>
 
-				<%= display_element(e.element) %>
-	
-			<% end %>
-			</DIV>
-			<%= sortable_element("contentelements", :url => 'TODO') %>
+			<UL id="elements" data-update-url="<%= sort_admin_page_elements_url %>">
+				<% @elements.each do |e| %>
+					<%= content_tag_for :li, e do %>
+						<%= display_element(e.element) %>
+					<% end %>
+				<% end %>
+			</UL>
 
 		</DIV>
 		<P><BR>Footer<BR></p>

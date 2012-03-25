@@ -6,9 +6,10 @@
 body { background: url('../pinstripe.png'); }
 
 /* Rollover Edit */
-.element { position: relative;  }
-	.element p.meta { position: absolute; font-size: 12px !important; background: #FFF; border-left: 1px solid #E3E3E3; padding: 10px !important; top: -10px; left: -95px; border-radius: 6px 0 0 6px; margin: 0 !important; display: none; }
-
+ul#elements li { position: relative; display: block; padding: 1px; }
+	ul#elements li span.meta { display:block; position: absolute; font-size: 12px !important; background: #FFF; border-left: 1px solid #E3E3E3; padding: 10px !important; top: -10px; left: -155px; border-radius: 6px 0 0 6px; margin: 0 !important; display: none; }
+	ul#elements li.ui-sortable-helper { opacity: 0.5;  }
+	
 .admin-interface { font-family: 'myriad-pro';
 	
 	.box { background: #f7fbff; padding: 10px; border-radius: 6px; box-shadow: 0 0px 3px #999; }

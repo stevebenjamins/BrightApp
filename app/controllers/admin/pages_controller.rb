@@ -42,9 +42,7 @@ class Admin::PagesController < ApplicationController
   def show
     user = User.find(session[:user_id])
     @page = Page.where("website_id = ? AND permalink = ?", user.website_id, params[:permalink]).first
-    
-    
-    
+    @elements = @page.page_elements.order("position")    
   end
   
   def destroy 
@@ -52,5 +50,6 @@ class Admin::PagesController < ApplicationController
     @page.destroy
 
   end
+
       
 end
